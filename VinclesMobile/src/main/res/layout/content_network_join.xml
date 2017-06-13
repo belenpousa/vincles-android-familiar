@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.network.NetworkActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/diary_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/task_link_new"
+            android:background="@color/black1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/menu_text_size"
+            android:gravity="center"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_large"
+            >
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:id="@+id/texMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextDefault"
+                android:text="{msg}"
+                android:paddingBottom="@dimen/padding_medium"
+                />
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                style="@style/TextDefault"
+                android:text="@string/join_code"
+                />
+
+            <cat.bcn.vincles.mobile.widget.AkkuratEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextDef"
+                android:layout_marginTop="@dimen/padding_small"
+                android:padding="@dimen/padding_medium"
+                android:id="@+id/ediCode"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spiRelationshipBg"
+                android:layout_marginTop="@dimen/padding_small"
+                android:padding="@dimen/padding_medium"
+                android:background="@drawable/edittext_background_def"
+                >
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spiRelationship"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_aceptar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_small"
+        android:layout_alignParentBottom="true"
+        android:background="@color/edittext_border"
+        >
+        <cat.bcn.vincles.mobile.widget.AkkuratButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ButtonRed"
+            android:onClick="joinNetwork"
+            android:text="@string/join_xarxa"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

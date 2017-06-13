@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:visibility="visible"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.network.NetworkActivity"
+    tools:showIn="@layout/app_bar_network">
+
+    <cat.bcn.vincles.lib.widget.AkkuratTextView
+        android:text="@string/task_link_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_medium"
+        android:background="@color/black1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/menu_text_size"
+        android:gravity="left"
+        />
+
+    <ListView
+        android:id="@+id/lisNetwork"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@color/window_background"
+        android:dividerHeight="3px"
+        android:visibility="visible"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_small"
+        android:background="@color/edittext_border">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_medium"
+            android:gravity="center"
+            android:background="@drawable/my_btn_rojo"
+            android:clickable="true"
+            android:onClick="addNetwork"
+            >
+
+            <cat.bcn.vincles.lib.widget.TintableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_red_32_dp"
+                android:tint="@color/white"/>
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_small"
+                android:textColor="@color/white"
+                android:textSize="@dimen/menu_text_size"
+                android:text="@string/task_link_new" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

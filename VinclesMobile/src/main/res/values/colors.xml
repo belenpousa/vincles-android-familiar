@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffDC002E</color>
+    <color name="colorPrimaryDark">#ffB51121</color>
+    <color name="colorAccent">#ffFFFFFF</color>
+    <color name="white">#ffFFFFFF</color>
+    <color name="menu_background">#ff333333</color>
+    <color name="menu_background_sel">#ffe5dfd6</color>
+    <color name="menu_separator">#ff555555</color>
+    <color name="menu_item_selected">#ff000000</color>
+    <color name="window_background">#ffF7F2EC</color>
+    <color name="edittext_border">#ffE5DFD6</color>
+    <color name="black">#FF000000</color>
+    <color name="switch_border">#ffCBC7BF</color>
+    <color name="button_background_gris">#758182</color>
+    <color name="calendar_disabled_cell">#e3ddd3</color>
+    <color name="ultralightgray">#f5f0ea</color>
+
+    <!-- TABLET COLORS -->
+    <color name="superlightgray">#e3ddd5</color>
+    <color name="lightgray">#b3b7b7</color>
+    <color name="gray">#626e6f</color>
+    <color name="grayshadow">#535b5b</color>
+    <color name="viewed_background">#D1CBC1</color>
+    <color name="gray1">#3D4343</color>
+    <color name="gray2">#CF0A2C</color>
+    <color name="red">#d9182a</color>
+    <color name="red1">#B51121</color>
+    <color name="black1">#242422</color>
+    <color name="black2">#010101</color>
+    <color name="black3">#ff333333</color>
+    <color name="fondo_claro">#f7f2ec</color>
+    <color name="fondo_oscuro">#3d4343</color>
+    <color name="fondo_panel_claro">#e5dfd6</color>
+    <color name="fondo_panel_oscuro">#535b5b</color>
+
+
+
+    <!-- Color title/desc -->
+    <color name="colorVersionText">#000000</color>
+    <!-- Color buttons Cancel/Accept -->
+    <color name="colorVersionAccent">@color/colorPrimary</color>
+    <!-- Color background -->
+    <color name="colorVersionBackground">@color/white</color>
+</resources>

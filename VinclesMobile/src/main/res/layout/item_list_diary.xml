@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="3">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/diaryClock"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/icon_reloj"
+            android:padding="@dimen/padding_small"
+            android:tint="@color/red"
+            android:scaleType="fitStart"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/startTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                />
+
+            <TextView
+                android:id="@+id/endTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_small"
+                android:text="00:00"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:layout_marginBottom="@dimen/padding_medium"
+            android:background="@color/gray"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_small"
+        >
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date Text"
+            />
+
+        <TextView
+            android:id="@+id/dateStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_small"
+            android:text="Status"
+            android:textColor="@color/red"
+            />
+
+        <Button
+            android:id="@+id/buttonRememberTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_small"
+            android:padding="@dimen/padding_small"
+            android:text="@string/task_button_remember"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:drawablePadding="@dimen/padding_small"
+            android:background="@drawable/my_btn_rojo"
+            />
+
+        <Button
+            android:id="@+id/buttonRemoveTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_small"
+            android:padding="@dimen/padding_small"
+            android:text="@string/task_button_remember"
+            android:drawableLeft="@drawable/icon_borrar"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:drawablePadding="@dimen/padding_small"
+            android:background="@drawable/my_btn_negro"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

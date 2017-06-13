@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ultralightgray"
+    tools:context=".activity.diary.fragments.DiaryDayFragment"
+    >
+
+    <TextView
+        android:id="@+id/diary_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/task_today"
+        android:background="@color/black1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/menu_text_size"
+        android:gravity="center"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/task_no_items_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/task_no_result"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/menu_text_size"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lisTask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

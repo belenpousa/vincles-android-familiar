@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="cat.bcn.vincles.mobile.activity.message.MessageListActivity"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lisMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/newTaskLayout"
+        android:background="@color/lightgray"
+        />
+
+    <TextView
+        android:id="@+id/texError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        android:text="@string/task_messages_empty"
+        android:textSize="@dimen/menu_text_size"
+        android:gravity="center"
+        android:layout_above="@id/newTaskLayout"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/newTaskLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/padding_small"
+        android:background="@color/edittext_border"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/my_btn_rojo"
+            android:gravity="center"
+            android:onClick="addMessage"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_mensajes"
+                android:padding="@dimen/padding_small"
+                android:tint="@color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/message_new"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_small"
+                android:textSize="@dimen/menu_text_size"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,242 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="cat.bcn.vincles.mobile.activity.diary.DiaryActivityNew"
+    android:focusableInTouchMode="true"
+    >
+    <!--tools:showIn="@layout/app_bar_diary_new"-->
+
+    <TextView
+        android:id="@+id/texBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_small"
+        android:textSize="@dimen/menu_text_size"
+        android:text="@string/task_new"
+        android:textColor="@color/white"
+        android:background="@color/gray1"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_medium"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_day"
+                android:textColor="@color/black"
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4"
+                >
+
+                <Spinner
+                    android:id="@+id/spiDay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/padding_small"
+                    android:background="@drawable/spinner_background"
+                    />
+
+                <Spinner
+                    android:id="@+id/spiMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_margin="@dimen/padding_small"
+                    android:background="@drawable/spinner_background"
+                    />
+
+                <Spinner
+                    android:id="@+id/spiYear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/padding_small"
+                    android:background="@drawable/spinner_background"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_occupied"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/padding_medium"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:text="@string/task_date_busy_hours"
+                    android:textColor="@color/black"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/canvas_occupied"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/padding_medium"
+                    >
+
+                    <include layout="@layout/item_task_busy_hours" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4"
+                >
+
+                <TextView
+                    android:id="@+id/txInitHour"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:text="@string/task_date_start"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/txDuration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:text="@string/task_date_lentgh"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4"
+                >
+
+                <Spinner
+                    android:id="@+id/spiHour"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/padding_small"
+                    android:background="@drawable/spinner_background"
+                    />
+
+                <Spinner
+                    android:id="@+id/spiMinute"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/padding_small"
+                    android:background="@drawable/spinner_background"
+                    />
+
+                <Spinner
+                    android:id="@+id/spiDuration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_margin="@dimen/padding_small"
+                    android:background="@drawable/spinner_background"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_small"
+                android:text="@string/task_date_description"
+                android:textColor="@color/black"
+                />
+
+            <EditText
+                android:id="@+id/ediDescriptionTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small"
+                android:minLines="5"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textColorHighlight="@color/red"
+                android:gravity="left|top"
+                android:inputType="textMultiLine"
+                android:layout_margin="@dimen/padding_small"
+                android:background="@drawable/spinner_background"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/newTaskLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/padding_small"
+        android:background="@color/edittext_border">
+
+        <LinearLayout
+            android:id="@+id/buttonAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/padding_small"
+            android:background="@drawable/my_btn_rojo"
+            android:gravity="center"
+            android:onClick="sendTask"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_yes_v"
+                android:padding="@dimen/padding_small"
+                android:tint="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/task_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/task_date_send"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_small"
+                android:textSize="@dimen/menu_text_size"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

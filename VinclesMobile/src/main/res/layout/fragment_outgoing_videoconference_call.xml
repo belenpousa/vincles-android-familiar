@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/padding_medium"
+            android:background="@color/edittext_border"
+            android:id="@+id/giveUpCallPanel">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/my_btn_negro"
+                android:gravity="center"
+                android:onClick="giveUpCall"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/white"
+                    android:src="@drawable/icon_colgar"
+                    android:padding="@dimen/padding_small"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/task_videocall_hangup"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:textSize="@dimen/menu_text_size"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mic_dots"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_above="@id/giveUpCallPanel">
+
+            <LinearLayout
+                android:id="@+id/callIcon"
+                android:layout_width="@dimen/calling_image_size"
+                android:layout_height="@dimen/calling_image_size"
+                android:background="@drawable/button_circle_red"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/padding_medium"
+                >
+                <ImageView
+                    android:layout_width="@dimen/calling_image_inside_size"
+                    android:layout_height="@dimen/calling_image_inside_size"
+                    android:tint="@color/white"
+                    android:src="@drawable/icon_llamar"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/switch_radius"
+                android:layout_height="@dimen/switch_radius"
+                android:background="@drawable/button_circle_grey"
+                />
+            <View
+                android:layout_width="@dimen/switch_radius"
+                android:layout_height="@dimen/switch_radius"
+                android:background="@drawable/button_circle_grey"
+                android:layout_margin="@dimen/padding_small"
+                />
+            <View
+                android:layout_width="@dimen/switch_radius"
+                android:layout_height="@dimen/switch_radius"
+                android:background="@drawable/button_circle_grey"
+                />
+            <View
+                android:layout_width="@dimen/switch_radius"
+                android:layout_height="@dimen/switch_radius"
+                android:background="@drawable/button_circle_grey"
+                android:layout_margin="@dimen/padding_small"
+                />
+            <View
+                android:layout_width="@dimen/switch_radius"
+                android:layout_height="@dimen/switch_radius"
+                android:background="@drawable/button_circle_grey"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imgPhoto"
+                android:layout_width="@dimen/calling_image_size"
+                android:layout_height="@dimen/calling_image_size"
+                android:src="@drawable/user"
+                android:layout_marginLeft="@dimen/padding_medium"
+                app:civ_border_width="4dp"
+                app:civ_border_color="@color/white"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

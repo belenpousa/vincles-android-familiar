@@ -1,0 +1,199 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <VideoView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/imgUserVideo"-->
+            <!--android:src="@drawable/user"-->
+            <!--android:layout_gravity="center" />-->
+
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/white"
+            android:layout_gravity="center"
+            android:src="@drawable/play"
+            android:visibility="gone"
+            android:background="@null"
+            />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:id="@+id/newButtonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/padding_small"
+            android:background="@color/edittext_border"
+            >
+            <LinearLayout
+                android:id="@+id/togMessageRecord"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/my_btn_rojo"
+                android:gravity="center"
+                android:onClick="sendText"
+                android:layout_marginBottom="2dp"
+                >
+                <!--android:onClick="sendText"-->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_video"
+                    android:scaleType="fitCenter"
+                    android:padding="@dimen/padding_small"
+                    android:tint="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/message_button_record"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/menu_text_size"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnGallery"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/my_btn_gris"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                >
+                <!--android:onClick="takeGalleryTextPhoto"-->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_archivo"
+                    android:scaleType="fitCenter"
+                    android:padding="@dimen/padding_small"
+                    android:tint="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/message_button_gallery"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/menu_text_size"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/newButtonsLayoutPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/padding_small"
+            android:background="@color/edittext_border"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:id="@+id/btnDiscardVideo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/my_btn_gris"
+                android:layout_marginRight="@dimen/padding_small"
+                android:gravity="center"
+                >
+                <!--android:onClick="takeGalleryTextPhoto"-->
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_no_x"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="@dimen/padding_small"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/message_button_delete"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/menu_text_size"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnSendVideo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/my_btn_rojo"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:gravity="center"
+                android:onClick="sendText"
+                >
+                <!--android:onClick="sendText"-->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_yes_v"
+                    android:scaleType="fitCenter"
+                    android:padding="@dimen/padding_small"
+                    android:tint="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/task_date_send"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/menu_text_size"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

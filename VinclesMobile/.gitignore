@@ -1,0 +1,6 @@
+.DS_Store
+/build
+*.OLD
+*.NEW
+*.iml
+/src/main/java/cat/bcn/vincles/mobile/util/VinclesVersion.java

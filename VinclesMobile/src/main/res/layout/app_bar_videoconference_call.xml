@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/webrtcatView"
+                android:visibility="invisible"
+                >
+                <org.appspot.apprtc.PercentFrameLayout
+                    android:id="@+id/remote_video_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <org.webrtc.SurfaceViewRenderer
+                        android:id="@+id/remote_video_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </org.appspot.apprtc.PercentFrameLayout>
+
+                <org.appspot.apprtc.PercentFrameLayout
+                    android:id="@+id/local_video_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <org.webrtc.SurfaceViewRenderer
+                        android:id="@+id/local_video_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </org.appspot.apprtc.PercentFrameLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:padding="@dimen/padding_medium"
+                android:background="@color/edittext_border"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/my_btn_negro"
+                    android:gravity="center"
+                    android:onClick="endCall"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tint="@color/white"
+                        android:src="@drawable/icon_colgar"
+                        android:padding="@dimen/padding_small"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/task_videocall_hangup"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/padding_small"
+                        android:textSize="@dimen/menu_text_size"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/call_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/red1"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginRight="@dimen/padding_small"
+        >
+        <LinearLayout
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/padding_small"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/callUserActionImg"
+                android:src="@drawable/user"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_small"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/callUserActionIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_llamar"
+            android:tint="@color/white"
+            />
+    </LinearLayout>
+</LinearLayout>

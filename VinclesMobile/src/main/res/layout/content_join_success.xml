@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/padding_small"
+    android:padding="@dimen/padding_small"
+    android:background="@drawable/button_background_white"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:gravity="center_horizontal|center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/button_background_white"
+        android:layout_margin="@dimen/padding_medium"
+        android:layout_below="@+id/diary_title"
+        android:layout_above="@+id/ll_aceptar"
+        >
+
+        <cat.bcn.vincles.lib.widget.AkkuratTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextDefault"
+            android:text="{welcome-user}"
+            android:gravity="center_horizontal"
+            android:id="@+id/texJoinSuccess"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgJoinUser"
+                android:layout_width="@dimen/menu_header_join_size_image"
+                android:layout_height="@dimen/menu_header_join_size_image"
+                android:layout_marginTop="@dimen/padding_small"
+                android:src="@drawable/user"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@color/window_background"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:text="{user}"
+                style="@style/TextDefault"
+                android:textStyle="bold"
+                android:id="@+id/texJoinUser"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
+
+        <cat.bcn.vincles.lib.widget.AkkuratTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextDefault"
+            android:text="@string/join_message_success_subtitle"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding_small"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_aceptar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_small"
+        android:layout_alignParentBottom="true"
+        android:background="@color/edittext_border"
+        >
+        <cat.bcn.vincles.mobile.widget.AkkuratButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ButtonRed"
+            android:onClick="enterVincles"
+            android:text="@string/keep_on"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

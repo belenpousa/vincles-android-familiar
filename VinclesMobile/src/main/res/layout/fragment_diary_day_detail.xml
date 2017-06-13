@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/newTaskLayout"
+        >
+        <include layout="@layout/fragment_diary_day" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/newTaskLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/padding_small"
+        android:background="@color/edittext_border"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/padding_small"
+            android:background="@drawable/my_btn_rojo"
+            android:gravity="center"
+            android:onClick="addTask"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_agenda"
+                android:padding="@dimen/padding_small"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/task_new"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_small"
+                android:textSize="@dimen/menu_text_size"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

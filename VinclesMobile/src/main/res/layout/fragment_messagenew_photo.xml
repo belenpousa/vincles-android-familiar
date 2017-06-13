@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal|bottom"
+    >
+
+    <FrameLayout
+        android:id="@+id/imageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonsContainer"
+        android:layout_margin="@dimen/padding_small"
+        >
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            />
+
+        <ImageButton
+            android:id="@+id/imgPhotoRemove"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="4dp"
+            android:layout_gravity="right|top"
+            android:visibility="gone"
+            android:tint="@color/white"
+            android:background="@drawable/delete_image_button"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:id="@+id/newButtonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/padding_small"
+            android:background="@color/edittext_border"
+            >
+
+            <LinearLayout
+                android:id="@+id/btnGallery"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/my_btn_gris"
+                android:layout_marginRight="@dimen/padding_small"
+                android:gravity="center"
+                >
+                <!--android:onClick="takeGalleryTextPhoto"-->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_archivo"
+                    android:scaleType="fitCenter"
+                    android:padding="@dimen/padding_small"
+                    android:tint="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/message_button_gallery"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/menu_text_size"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnTakePhoto"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/my_btn_rojo"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:gravity="center"
+                android:onClick="sendText"
+                >
+                <!--android:onClick="sendText"-->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_fotos"
+                    android:scaleType="fitCenter"
+                    android:padding="@dimen/padding_small"
+                    android:tint="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/message_button_takepicture"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/menu_text_size"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/newButtonsLayoutPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/padding_small"
+            android:background="@color/edittext_border"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:id="@+id/btnDiscardImage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/my_btn_gris"
+                android:layout_marginRight="@dimen/padding_small"
+                android:gravity="center"
+                >
+                <!--android:onClick="takeGalleryTextPhoto"-->
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_no_x"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="@dimen/padding_small"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/message_button_delete"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/menu_text_size"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnSendImage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/my_btn_rojo"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:gravity="center"
+                android:onClick="sendText"
+                >
+                <!--android:onClick="sendText"-->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_yes_v"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/white"
+                    android:padding="@dimen/padding_small"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/task_date_send"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/menu_text_size"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

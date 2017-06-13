@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_content"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/vinclesbcn"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <include layout="@layout/hrule" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="@dimen/padding_large"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/activity_horizontal_margin"
+            >
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:gravity="center"
+                style="@style/TextDefault"
+                android:text="@string/validate_info" />
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                style="@style/TextDefault"
+                android:text="@string/validate_key" />
+
+            <cat.bcn.vincles.mobile.widget.AkkuratEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:textCursorDrawable="@null"
+                android:gravity="center"
+                android:background="@drawable/edittext_background_def"
+                android:id="@+id/ediValidate" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/edittext_border"
+        android:padding="@dimen/padding_small"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/validate_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:clickable="true"
+            style="@style/ButtonRed"
+            android:onClick="validateUser"
+            android:padding="@dimen/padding_medium"
+            >
+            <!--<cat.bcn.vincles.lib.widget.TintableImageView-->
+            <!--android:layout_width="@dimen/menu_header_size_icon"-->
+            <!--android:layout_height="@dimen/menu_header_size_icon"-->
+            <!--android:src="@drawable/icon_aceptar"-->
+            <!--android:clickable="false"-->
+            <!--app:tint="@color/white"/>-->
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:paddingLeft="@dimen/padding_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@string/verify"
+                android:textSize="@dimen/menu_text_size_net"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:clickable="true"
+                android:layout_marginTop="@dimen/padding_small"
+                style="@style/ButtonGris"
+                android:onClick="resendEmail"
+                android:padding="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/padding_micro"
+                >
+                <!--<cat.bcn.vincles.lib.widget.TintableImageView-->
+                <!--android:layout_width="@dimen/menu_header_size_icon"-->
+                <!--android:layout_height="@dimen/menu_header_size_icon"-->
+                <!--android:src="@drawable/icon_aceptar"-->
+                <!--android:clickable="false"-->
+                <!--app:tint="@color/white"/>-->
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:paddingLeft="@dimen/padding_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:clickable="false"
+                    android:text="@string/resend_email"
+                    android:textSize="@dimen/menu_text_size_net"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:clickable="true"
+                android:layout_marginTop="@dimen/padding_small"
+                style="@style/ButtonGris"
+                android:onClick="goBack"
+                android:padding="@dimen/padding_medium"
+                android:layout_marginLeft="@dimen/padding_micro"
+                >
+                <!--<cat.bcn.vincles.lib.widget.TintableImageView-->
+                <!--android:layout_width="@dimen/menu_header_size_icon"-->
+                <!--android:layout_height="@dimen/menu_header_size_icon"-->
+                <!--android:src="@drawable/icon_aceptar"-->
+                <!--android:clickable="false"-->
+                <!--app:tint="@color/white"/>-->
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:paddingLeft="@dimen/padding_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:clickable="false"
+                    android:text="@string/back"
+                    android:textSize="@dimen/menu_text_size_net"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

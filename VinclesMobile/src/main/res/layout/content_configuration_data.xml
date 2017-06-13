@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include
+        android:id="@+id/incBack"
+        layout="@layout/include_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false"
+        android:fillViewport="true"
+        android:layout_below="@+id/incBack">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:orientation="vertical"
+                >
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                style="@style/TextDefault"
+                android:text="@string/first_name" />
+
+            <cat.bcn.vincles.mobile.widget.AkkuratEditText
+                android:id="@+id/ediFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/edittext_background_def"
+                android:singleLine="true"
+
+                android:inputType="textPersonName"
+                />
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                style="@style/TextDefault"
+                android:text="@string/last_name" />
+
+            <cat.bcn.vincles.mobile.widget.AkkuratEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/edittext_background_def"
+                android:singleLine="true"
+
+                android:inputType="textPersonName"
+                android:id="@+id/ediLastName"
+
+               />
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                style="@style/TextDefault"
+                android:text="@string/email_register" />
+
+            <cat.bcn.vincles.mobile.widget.AkkuratEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/edittext_background_def"
+                android:singleLine="true"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:id="@+id/ediEmail"
+
+                />
+
+            <!--<cat.bcn.vincles.lib.widget.AkkuratTextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/padding_medium"-->
+                <!--style="@style/TextDefault"-->
+                <!--android:text="@string/email" />-->
+
+            <!--<cat.bcn.vincles.mobile.widget.AkkuratEditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/padding_small"-->
+                <!--android:textCursorDrawable="@null"-->
+                <!--android:background="@drawable/edittext_background_def"-->
+                <!--android:singleLine="true"-->
+                <!--android:inputType="textEmailAddress"-->
+                <!--android:id="@+id/ediEmail" />-->
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                style="@style/TextDefault"
+                android:text="@string/phone" />
+
+            <cat.bcn.vincles.mobile.widget.AkkuratEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/edittext_background_def"
+                android:singleLine="true"
+
+                android:inputType="phone"
+                android:id="@+id/ediPhone" />
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                style="@style/TextDefault"
+                android:text="@string/home_bcn" />
+
+                <FrameLayout
+                    style="@style/switchLayout"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:background="@drawable/custom_track"
+                    >
+                <LinearLayout
+                    style="@style/switchBackground"
+                    android:layout_height="@dimen/switch_size_h"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <cat.bcn.vincles.lib.widget.AkkuratTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        style="@style/switchTextLeft"
+                        android:layout_weight="1"
+                        android:text="@string/no"/>
+                    <cat.bcn.vincles.lib.widget.AkkuratTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        style="@style/switchTextRight"
+                        android:layout_weight="1"
+                        android:text="@string/yes"/>
+                </LinearLayout>
+
+                <cat.bcn.vincles.mobile.widget.AkkuratSwitch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="@string/no"
+                    android:textOn="@string/yes"
+                    style="@style/SwitchStyle"
+                    android:showText="true"
+                    android:id="@+id/swiHome" />
+                </FrameLayout>
+
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    style="@style/TextDefault"
+                    android:text="@string/newpassword" />
+
+                <cat.bcn.vincles.mobile.widget.AkkuratEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:textCursorDrawable="@null"
+                    android:background="@drawable/edittext_background_def"
+                    android:inputType="textPassword"
+                    android:id="@+id/ediPassword" />
+
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    style="@style/TextDefault"
+                    android:text="@string/repeatpassword" />
+
+                <cat.bcn.vincles.mobile.widget.AkkuratEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:textCursorDrawable="@null"
+                    android:background="@drawable/edittext_background_def"
+                    android:inputType="textPassword"
+                    android:id="@+id/ediPasswordRepeat" />
+
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    style="@style/TextDefault"
+                    android:text="@string/oldpassword" />
+
+                <cat.bcn.vincles.mobile.widget.AkkuratEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:textCursorDrawable="@null"
+                    android:background="@drawable/edittext_background_def"
+                    android:inputType="textPassword"
+                    android:id="@+id/ediOldPassword" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_aceptar"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_small"
+                android:layout_marginTop="@dimen/padding_small"
+                android:background="@color/edittext_border"
+                >
+                <cat.bcn.vincles.mobile.widget.AkkuratButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ButtonRed"
+                    android:onClick="savePersonalData"
+                    android:text="@string/save" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_error"
+                android:background="@color/black"
+                android:padding="@dimen/padding_small"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:id="@+id/textUserData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white"
+                    android:text="@string/error_update" />
+
+                <cat.bcn.vincles.mobile.widget.AkkuratButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    style="@style/ButtonBlack"
+                    android:onClick="savePersonalDataError"
+                    android:text="@string/close" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

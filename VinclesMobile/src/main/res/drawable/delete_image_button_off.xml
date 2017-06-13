@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bottom Shadow -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/black" />
+        </shape>
+    </item>
+
+    <!-- Top color -->
+    <item
+        android:drawable="@drawable/icon_no_x"
+        android:left="12dp"
+        android:right="12dp"
+        android:bottom="12dp"
+        android:top="12dp"
+        />
+</layer-list>

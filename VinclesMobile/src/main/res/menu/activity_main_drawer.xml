@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/menu_inici"
+            android:id="@+id/nav_home"
+            android:title="@string/title_activity_home" />
+        <item
+            android:icon="@drawable/menu_videotrucada"
+            android:id="@+id/nav_videocall"
+            android:title="@string/title_activity_video_call" />
+        <item
+            android:icon="@drawable/menu_missatges"
+            android:id="@+id/nav_messages"
+            android:title="@string/title_activity_message" />
+        <item
+            android:icon="@drawable/menu_agenda"
+            android:id="@+id/nav_diary"
+            android:title="@string/title_activity_task" />
+        <item
+            android:icon="@drawable/menu_notes"
+            android:id="@+id/nav_notes"
+            android:title="@string/title_activity_notes" />
+        <item
+            android:icon="@drawable/menu_configuracio"
+            android:id="@+id/nav_configuration"
+            android:title="@string/title_activity_configuration" />
+        <item
+            android:icon="@drawable/menu_sobrevincles"
+            android:id="@+id/nav_about"
+            android:title="@string/title_activity_about" />
+    </group>
+
+    <item
+        android:title="Version">
+        <menu>
+            <item
+                android:id="@+id/nav_version"
+                android:title="{version}"></item>
+            <item
+                android:id="@+id/nav_versionname"
+                android:title="{version}"></item>
+            <item
+                android:id="@+id/nav_flavour"
+                android:title="{version}"></item>
+        </menu>
+    </item>
+
+    <item
+        android:icon="@drawable/menu_logout"
+        android:id="@+id/nav_logout"
+        android:title="@string/title_activity_logout" />
+</menu>

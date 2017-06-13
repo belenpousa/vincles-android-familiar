@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="SwitchStyle">
+        <item name="android:showText">true</item>
+        <item name="android:thumb">@drawable/customswitchselector</item>
+        <item name="android:track">@color/caldroid_transparent</item>
+        <item name="android:switchTextAppearance">@style/SwitchTextAppearance</item>
+    </style>
+
+    <style name="switchLayout" parent="@android:style/TextAppearance.Holo.Medium">
+        <item name="android:visibility">visible</item>
+        <item name="android:layout_width">@dimen/switch_size_w_total</item>
+    </style>
+
+    <style name="switchBackground" parent="@android:style/TextAppearance.Holo.Medium">
+        <item name="android:visibility">visible</item>
+        <item name="android:layout_width">@dimen/switch_size_w_total</item>
+    </style>
+
+    <style name="switchTextLeft">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="switchTextRight">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

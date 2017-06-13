@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="cat.bcn.vincles.mobile.activity.config.ConfigurationActivity"
+    android:visibility="visible"
+    tools:showIn="@layout/app_bar_configuration"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgUserConfiguration"
+                android:layout_width="@dimen/menu_header_size_image"
+                android:layout_height="@dimen/menu_header_size_image"
+                android:layout_marginTop="@dimen/padding_small"
+                android:src="@drawable/user"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/white"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <cat.bcn.vincles.mobile.widget.AkkuratButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:paddingLeft="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_small"
+                style="@style/ButtonGris"
+                android:text="@string/change_photo"
+                android:onClick="takePhoto"
+                android:layout_gravity="center_horizontal" />
+
+            <include layout="@layout/hrule" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    style="@style/TextDefault"
+                    android:text="{personal-data}"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/texPersonalData"
+                    />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_editar_24_dp"
+                    style="@style/ButtonGris"
+                    android:onClick="editPersonalData"
+                    android:tint="@color/white"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_medium"
+                    android:paddingRight="@dimen/padding_medium"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    />
+            </RelativeLayout>
+
+            <include layout="@layout/hrule" />
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                style="@style/TextDefault"
+                android:text="@string/registration_language"
+                />
+            <FrameLayout
+                style="@style/switchLayout"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/custom_track"
+                >
+            <LinearLayout
+                style="@style/switchBackground"
+                android:layout_height="@dimen/switch_size_h"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/switchTextLeft"
+                    android:layout_weight="1"
+                    android:text="@string/catalan"
+                    />
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/switchTextRight"
+                    android:layout_weight="1"
+                    android:text="@string/spanish"
+                    />
+            </LinearLayout>
+            <cat.bcn.vincles.mobile.widget.AkkuratSwitch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SwitchStyle"
+                android:textOff="@string/catalan"
+                android:textOn="@string/spanish"
+                android:showText="true"
+                android:id="@+id/swiLocale"
+                />
+            </FrameLayout>
+
+            <include layout="@layout/hrule"/>
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextDefault"
+                android:text="@string/configuration_receive_notifications"
+                />
+            <FrameLayout
+                style="@style/switchLayout"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/custom_track"
+                >
+            <LinearLayout
+                style="@style/switchBackground"
+                android:layout_height="@dimen/switch_size_h"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/switchTextLeft"
+                    android:layout_weight="1"
+                    android:text="@string/no"/>
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/switchTextRight"
+                    android:layout_weight="1"
+                    android:text="@string/yes"/>
+            </LinearLayout>
+            <cat.bcn.vincles.mobile.widget.AkkuratSwitch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SwitchStyle"
+                android:textOff="@string/no"
+                android:textOn="@string/yes"
+                android:showText="true"
+                android:id="@+id/swiNotification"
+                />
+            </FrameLayout>
+
+            <include layout="@layout/hrule" />
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                style="@style/TextDefault"
+                android:text="@string/configuration_allow_downlodas"
+                />
+            <FrameLayout
+                style="@style/switchLayout"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/custom_track"
+                >
+            <LinearLayout
+                style="@style/switchBackground"
+                android:layout_height="@dimen/switch_size_h"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/switchTextLeft"
+                    android:layout_weight="1"
+                    android:text="@string/no"
+                    />
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/switchTextRight"
+                    android:layout_weight="1"
+                    android:text="@string/yes"
+                    />
+            </LinearLayout>
+            <cat.bcn.vincles.mobile.widget.AkkuratSwitch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SwitchStyle"
+                android:textOff="@string/no"
+                android:textOn="@string/yes"
+                android:showText="true"
+                android:id="@+id/swiDownloads"
+                />
+            </FrameLayout>
+
+            <include layout="@layout/hrule" />
+
+            <cat.bcn.vincles.lib.widget.AkkuratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                style="@style/TextDefault"
+                android:text="@string/configuration_allow_synchronizations"
+                />
+            <FrameLayout
+                style="@style/switchLayout"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/custom_track"
+                >
+            <LinearLayout
+                style="@style/switchBackground"
+                android:layout_height="@dimen/switch_size_h"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/switchTextLeft"
+                    android:layout_weight="1"
+                    android:text="@string/no"
+                    />
+                <cat.bcn.vincles.lib.widget.AkkuratTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/switchTextRight"
+                    android:layout_weight="1"
+                    android:text="@string/yes"
+                    />
+            </LinearLayout>
+            <cat.bcn.vincles.mobile.widget.AkkuratSwitch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SwitchStyle"
+                android:textOff="@string/no"
+                android:textOn="@string/yes"
+                android:showText="true"
+                android:id="@+id/swiSynchronization"
+                />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

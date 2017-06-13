@@ -1,4 +1,4 @@
-# VINCLES-BCN-MOBILE-ANDROID #
+# VINCLES-BCN-FAMILIAR-ANDROID #
 **Version 2.0.5**
 
 Vincles BCN is a new service of the City of Barcelona's Social Services Department to help us keep in touch with our seniors.
