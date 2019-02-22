@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "393162300208",
+    "firebase_url": "https://vincles-144113.firebaseio.com",
+    "project_id": "vincles-144113",
+    "storage_bucket": "vincles-144113.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393162300208:android:9743f0f78d5e2bdd",
+        "android_client_info": {
+          "package_name": "cat.bcn.vincles.tablet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393162300208-3tu9310fl6q9ipctgj3at067oc1c000f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cat.bcn.vincles.tablet",
+            "certificate_hash": "440686898353B98BEE6B2DEADBAA9DC7B8584A5B"
+          }
+        },
+        {
+          "client_id": "393162300208-v4hg22cbm4jq0f6u0pal857027i52lbg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmrQTQjbMegcLYivKovOyRJY7nVOn3dO4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393162300208-v4hg22cbm4jq0f6u0pal857027i52lbg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "393162300208-jbcf5u3489nt7p32l7udo4cc9qoqaii9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "cat.bcn.vincles"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393162300208:android:9b469d72cd4e53a9",
+        "android_client_info": {
+          "package_name": "cat.bcn.vincles.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393162300208-ie6ikm9ga8grq1j54f2pc6ud0fb3jfrv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cat.bcn.vincles.mobile",
+            "certificate_hash": "440686898353B98BEE6B2DEADBAA9DC7B8584A5B"
+          }
+        },
+        {
+          "client_id": "393162300208-v4hg22cbm4jq0f6u0pal857027i52lbg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmrQTQjbMegcLYivKovOyRJY7nVOn3dO4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393162300208-v4hg22cbm4jq0f6u0pal857027i52lbg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "393162300208-jbcf5u3489nt7p32l7udo4cc9qoqaii9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "cat.bcn.vincles"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="analytic_key"> UA-XXXXXXXXX-X</string>
+    <string name="control_version_url">url</string>
+    <string name="rate_ url">url</string>
+    <string name="maps_key">value_key</string>
+    </resources>

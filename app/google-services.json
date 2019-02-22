@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "418291205424",
+    "firebase_url": "https://vincles-mobile.firebaseio.com",
+    "project_id": "vincles-mobile",
+    "storage_bucket": "vincles-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418291205424:android:9b469d72cd4e53a9",
+        "android_client_info": {
+          "package_name": "cat.bcn.vincles.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418291205424-sd7eiq3n2f223pj2eekg55plumr79e5s.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "418291205424-lv9dh9br6ff7efjh0vqpf9mo1ojaq87q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7nsvoO8KOwazez6r00_mDpXnOtDaA_5c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
